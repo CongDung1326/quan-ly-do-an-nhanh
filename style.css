@@ -1,0 +1,732 @@
+/* 
+    Theme Name: Quan Ly Do An Nhanh
+    Author: Don vau
+    Version: 1.0
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Menu */
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.nav-menu img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+.nav-menu .menu-logo,
+.nav-menu .menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu .menu-contact {
+    font-size: 0.8rem;
+}
+
+.nav-menu .menu-contact .phone {
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.nav-menu .menu a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+.nav-menu .menu a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.25s ease;
+}
+
+.nav-menu .menu li:hover a::before {
+    width: 100%;
+}
+
+.nav-menu .menu li.current-menu-item a::before {
+    width: 100%;
+}
+
+/* Slides-bar */
+.slides-bar {
+    max-width: 80%;
+    height: 300px;
+}
+
+.slides-bar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider__list {
+    height: 300px;
+    width: 600px;
+    position: relative;
+    margin: 10px auto 0px;
+    padding-bottom: 20px;
+}
+
+.slider__list img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.slider__list .slider {
+    display: none;
+}
+
+.slider__list .slider.show {
+    display: block;
+}
+
+.slider__list .slider {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.slider .image {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__page {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.icon__right,
+.icon__left {
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: -30px;
+    font-size: 32px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.icon__right {
+    left: unset;
+    right: -30px;
+}
+
+.dots {
+    color: silver;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    font-size: 0.6rem;
+}
+
+.dots .dot {
+    cursor: pointer;
+}
+
+.dots .dot.active {
+    color: white;
+}
+
+/* Tag-menu */
+.tag-menu-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+}
+
+.tag-menu {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.tag-menu .title {
+    color: #422f1e;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.tag-menu .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.tag-menu .menu a {
+    text-decoration: none;
+    color: #422f1e;
+}
+
+.tag-menu .foods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    text-align: center;
+    grid-auto-rows: 1fr;
+}
+
+.tag-menu .foods .food {
+    margin: 0 auto;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: box-shadow 0.25s ease;
+}
+
+.tag-menu .foods .food:hover {
+    box-shadow: 3px 3px 8px black;
+}
+
+.tag-menu .foods .food img {
+    width: 150px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tag-menu .foods .food-content .title {
+    color: #422f1e;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 5px;
+}
+
+.tag-menu .foods .food-content .text {
+    color: #f4a331;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* banner-material */
+.banner-material-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-material {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.banner-material h3.title {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.banner-material .box-material {
+    display: flex;
+    padding: 20px 0;
+}
+
+.banner-material .box-material .material {
+    text-align: center;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+.banner-material .box-material .material img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.banner-material .box-material .material .title {
+    margin-bottom: 5px;
+}
+
+.banner-material .box-material .material .text {
+    font-size: 0.8rem;
+}
+
+/* Chefs */
+.chefs-background {
+    background: #292524;
+    padding: 10px 0 25px;
+}
+
+.chefs-background h3.title {
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.chefs {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    user-select: none;
+    min-height: 250px;
+}
+
+.chefs::-webkit-scrollbar {
+    width: 0;
+}
+
+.chefs .chef {
+    background: #fffaf4;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.chefs .chef .chef-image {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chefs .chef .chef-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chefs .chef .chef-content .title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.chefs .chef .chef-content .text {
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+/* feedback */
+.feedback-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feedback {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.feedback h3.title {
+    padding: 20px 0;
+    text-align: center;
+    color: #422f1e;
+}
+
+.feedback .feedback-input {
+    text-align: center;
+}
+
+.feedback .feedback-input .input {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 20px auto;
+}
+
+
+.feedback .feedback-input input,
+.feedback .feedback-input textarea {
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.feedback .feedback-input .input {
+    position: relative;
+}
+
+.feedback .feedback-input .input label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    pointer-events: none;
+    transition: 0.25s ease-in;
+}
+
+.feedback .feedback-input .input input:focus~label,
+.feedback .feedback-input .input textarea:focus~label,
+.feedback .feedback-input .input input:valid~label,
+.feedback .feedback-input .input textarea:valid~label {
+    top: -10px;
+    font-size: 0.7rem;
+    opacity: 1;
+}
+
+.feedback .feedback-input button {
+    outline: none;
+    border: none;
+    padding: 10px;
+    background: #e12709;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+}
+
+/* Foods */
+.food-container {
+    max-width: 80%;
+    margin: 10px auto;
+}
+
+.food-container h2.title {
+    text-align: center;
+    margin: 20px 0 50px;
+}
+
+.foods-container .title,
+.foods-container .slogan {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+}
+
+.foods-container .slogan {
+    margin-top: 5px;
+}
+
+.foods-container .filters ul#menu-food-menu {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    list-style: none;
+}
+
+
+.foods-container .filters ul#menu-food-menu a {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: block;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.foods-container .filters ul#menu-food-menu a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #e5000082;
+    transition: 0.25s ease;
+}
+
+.foods-container .filters ul#menu-food-menu :not(li.current-menu-item):hover a::before {
+    width: 100%;
+}
+
+.foods-container .filters ul#menu-food-menu li.current-menu-item a {
+    background: #e50000;
+    color: white;
+    border: none;
+}
+
+.foods-container .foods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    text-align: center;
+    grid-auto-rows: 1fr;
+}
+
+.foods-container .foods .food {
+    margin: 0 auto;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid dimgrey;
+}
+
+.foods-container .foods .food img {
+    width: 150px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.foods-container .foods .food-content .title {
+    color: #422f1e;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 5px;
+    margin-bottom: 3px;
+}
+
+.foods-container .foods .food-content .text {
+    color: #f4a331;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* about us */
+.review {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    text-align: center;
+    height: 300px;
+}
+
+.review h1.title {
+    margin: 10px 0;
+}
+
+.review p.text {
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* the store */
+.the-store-container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.the-store-container .the-store {
+    display: flex;
+    gap: 20px;
+}
+
+.the-store-container .the-store .left {
+    width: 50%;
+    height: 400px;
+}
+
+.the-store-container .the-store .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.the-store-container .the-store .right {
+    width: 50%;
+    padding: 30px;
+    background: #ffcf13;
+}
+
+.the-store-container .the-store .right .text {
+    margin: 10px 0;
+}
+
+.the-store-container .the-store .right .time-open {
+    margin: 10px 0;
+}
+
+.the-store-container .the-store .right .time-open .open {
+    display: flex;
+    justify-content: space-between;
+}
+
+.the-store-container .the-store .right .time-open .open .time {
+    color: white;
+    font-weight: bold;
+}
+
+.the-store-container .the-store .right .social-media {
+    display: flex;
+    gap: 10px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.the-store-container .the-store .right .social-media a {
+    color: black;
+}
+
+/* The material */
+.the-event-container {
+    margin: 30px auto;
+    background: #ffcf13;
+}
+
+.the-event-container .the-event {
+    width: 80%;
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.the-event-container .the-event .right {
+    width: 50%;
+    height: 400px;
+}
+
+.the-event-container .the-event .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.the-event-container .the-event .left {
+    width: 50%;
+    padding: 30px;
+}
+
+.the-event-container .the-event .left .text {
+    margin: 10px 0;
+}
+
+/* The product */
+.the-product-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.the-product-container h2.title {
+    max-width: 300px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.the-product-container p.text {
+    font-size: 0.8rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.the-product {
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.the-product .center {
+    width: 50%;
+}
+
+.the-product .center img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.the-product .left,
+.the-product .right {
+    width: 50%;
+}
+
+.the-product .left .box-text,
+.the-product .right .box-text {
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px 0;
+    background: #e3d2ce;
+}
+
+.the-product .left .box-text p.text,
+.the-product .right .box-text p.text {
+    text-align: left;
+    margin-top: 5px;
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #f9f5f2;
+}
+
+footer .social-media {
+    display: flex;
+    font-size: 1.8rem;
+    gap: 5px;
+}
+
+footer .social-media a {
+    color: black;
+}
+
+footer .nav-menu .menu {
+    gap: unset;
+}
+
+footer .menu li {
+    border-left: 1px solid;
+}
+
+footer .menu li:last-child {
+    border-right: 1px solid;
+}
+
+/* Page */
+.page {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page h2.title {
+    text-align: center;
+    margin: 20px 0 50px;
+}
+
+/* Main */
+main {
+    min-height: 600px;
+}
